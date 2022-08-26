@@ -1,0 +1,106 @@
+@use "../global" as *;
+
+.l-section-news {
+  background-color: $back-accent-color;
+}
+
+.news-inner {
+  padding: 30px 0;
+
+  @include mq("tab") {
+    padding: 50px 0;
+  }
+
+  @include mq("xl") {
+    padding: 50px 0 110px;
+  }
+}
+
+.news {
+  margin-top: 30px;
+  padding: 20px 15px;
+  border-radius: 30px;
+  background-color: $back-color;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+
+  @include mq("xl") {
+    margin-top: 70px;
+    padding: 40px 60px 20px;
+  }
+}
+
+.news-items {
+  padding: 0 15px;
+}
+
+.news-item {
+  a {
+    display: block;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.news-body {
+  padding: 20px 0;
+  border-bottom: solid 2px $border-color;
+
+  @include mq("tab") {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  @include mq("xl") {
+    padding: 15px 0;
+  }
+}
+
+.news-body__header {
+  display: flex;
+  align-items: center;
+}
+
+.news-time {
+  color: $accent-color;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  @include mq("tab") {
+    font-size: 1rem;
+  }
+}
+
+.news-category {
+  display: inline-block;
+  min-width: 60px;
+  margin-left: 20px;
+  padding: 3px 7px;
+  background-color: $category-back-color;
+  color: $font-color-white;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-align: center;
+
+  @include mq("tab") {
+    width: 80px;
+    font-size: 0.75rem;
+  }
+}
+
+.news-title {
+  padding-top: 20px;
+  color: $font-color;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  @include mq("tab") {
+    padding-top: 0;
+    padding-left: 20px;
+    overflow: hidden;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

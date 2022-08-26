@@ -1,6 +1,2 @@
-@charset 'UTF-8';
-//============================================
-//  Foundation
-//============================================
-@use "oreset";
-@use "base";
+@forward "reset";
+@forward "base";

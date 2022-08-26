@@ -1,0 +1,101 @@
+@use "../global" as *;
+
+.l-wrapper {
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include mq("tab") {
+    padding: 0 50px;
+  }
+
+  // @include mq("pc") {
+  //   max-width: $content-width-inner;
+  // }
+
+  @include mq("xxl") {
+    max-width: $content-width-inner;
+    padding: 0;
+  }
+}
+
+.heading-primary {
+  font-weight: 700;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(transparent 70%, $bottom-color 70%);
+
+    &:nth-of-type(2) {
+      margin-top: 20px;
+    }
+  }
+
+  @include mq("tab") {
+    font-size: 1.25rem;
+  }
+
+  @include mq("xl") {
+    font-size: 1.5rem;
+  }
+}
+
+.button-primary {
+  margin: 20px 0;
+
+  @include mq("tab") {
+    margin: 30px 0;
+  }
+}
+
+.button {
+  display: block;
+  position: relative;
+  width: 90px;
+  margin-left: auto;
+  padding-right: 15px;
+  color: $font-color;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: right;
+
+  @include mq("tab") {
+    width: 130px;
+    font-size: 1rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    width: 0;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid $arrow-color;
+
+    @include mq("tab") {
+      top: 6px;
+      right: 2px;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 7px solid $arrow-color;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+    &::before {
+      right: 0;
+    }
+  }
+}
+
+.is-sp {
+  @include mq("tab") {
+    display: none;
+  }
+}

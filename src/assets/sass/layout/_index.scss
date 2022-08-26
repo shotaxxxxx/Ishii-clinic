@@ -1,11 +1,7 @@
-@charset 'UTF-8';
-//============================================
-//  Layout
-//============================================
-@use "page";
-@use "container";
-@use "header";
-@use "main";
-@use "footer";
-@use "spacer";
-@use "grid";
+@forward "common";
+@forward "header";
+@forward "hero";
+@forward "about";
+@forward "medical";
+@forward "news";
+@forward "footer";

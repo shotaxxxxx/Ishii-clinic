@@ -1,0 +1,87 @@
+@use "../global" as *;
+
+.about-inner {
+  padding: 30px 0;
+
+  @include mq("tab") {
+    padding: 80px 0;
+  }
+
+  @include mq("xl") {
+    padding: 120px 0 80px;
+  }
+
+  @include mq("xxl") {
+    padding: 160px 0 80px;
+  }
+}
+
+.about-contents {
+  display: block;
+
+  @include mq("tab") {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.text-content {
+  @include mq("tab") {
+    width: 50%;
+  }
+
+  @include mq("pc") {
+    width: 40%;
+  }
+
+  @include mq("xl") {
+    width: 40%;
+  }
+}
+
+.about-title {
+  text-align: center;
+
+  @include mq("tab") {
+    text-align: left;
+  }
+}
+
+.about-text {
+  padding-top: 30px;
+  font-size: 0.75rem;
+  line-height: 2.375;
+  text-align: center;
+
+  @include mq("tab") {
+    padding-top: 20px;
+    text-align: left;
+  }
+
+  @include mq("lg") {
+    font-size: 0.875rem;
+  }
+
+  @include mq("xl") {
+    font-size: 1rem;
+  }
+}
+
+.image-content {
+  padding-top: 30px;
+  text-align: center;
+
+  @include mq("tab") {
+    width: 50%;
+    padding-top: 0;
+    text-align: right;
+  }
+
+  @include mq("pc") {
+    width: 60%;
+  }
+
+  @include mq("xl") {
+    width: 60%;
+  }
+}

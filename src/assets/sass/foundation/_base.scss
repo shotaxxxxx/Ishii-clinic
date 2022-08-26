@@ -1,7 +1,41 @@
-@charset 'UTF-8';
-@use "sass:math";
 @use "../global" as *;
 
-/*
-  Base
------------------------------------------------------*/
+// デフォルトスタイル
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: $font-family;
+  font-size: medium;
+  line-height: 1.5;
+}
+
+html *,
+html *:before,
+html *::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  color: $font-color;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+address {
+  font-style: normal;
+}
+
+// アクセシビリティ
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}

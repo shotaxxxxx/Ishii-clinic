@@ -1,0 +1,101 @@
+@use "../global" as *;
+
+.l-section-medical {
+  background-color: $back-accent-color;
+}
+
+.medical-inner {
+  padding: 30px 0;
+
+  @include mq("xl") {
+    padding: 70px 0 30px;
+  }
+}
+
+.sub-text {
+  padding-top: 60px;
+  font-size: 0.75rem;
+  text-align: center;
+
+  @include mq("lg") {
+    font-size: 0.875rem;
+  }
+
+  @include mq("xl") {
+    font-size: 1rem;
+  }
+}
+
+.l-medical-items {
+  padding-top: 30px;
+
+  @include mq("tab") {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.l-medical-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  border: solid 2px $item-border-color;
+  border-radius: 10px;
+  background-color: $back-color;
+
+  @include mq("tab") {
+    width: calc(33% - 20px * 2 / 3);
+    max-width: 380px;
+  }
+
+  @include mq("lg") {
+    padding: 25px;
+  }
+
+  @include mq("xl") {
+    padding: 35px 38px;
+  }
+}
+
+.l-medical-item + .l-medical-item {
+  margin-top: 30px;
+
+  @include mq("tab") {
+    margin-top: 0;
+  }
+}
+
+.medical-title {
+  font-weight: 700;
+  text-align: center;
+
+  @include mq("xl") {
+    font-size: 1.5rem;
+  }
+}
+
+.medical-text {
+  padding-top: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 2.375;
+
+  @include mq("tab") {
+    flex-grow: 1;
+  }
+
+  @include mq("lg") {
+    font-size: 0.875rem;
+  }
+
+  @include mq("pc") {
+    font-size: 1rem;
+  }
+}
+
+.medical-image {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+}
